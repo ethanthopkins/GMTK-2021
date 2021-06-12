@@ -82,6 +82,7 @@ function scPlayerCollision()
 	//show_debug_message(arrayLength);
 	if (instance_exists(oMovingPlatform))
 	{
+		//HORIZONTAL
 		if (place_meeting(x+oMovingPlatform.platformSpeed,y,oMovingPlatform))
 		{
 			x -= oMovingPlatform.platformSpeed;
@@ -89,6 +90,29 @@ function scPlayerCollision()
 		if (place_meeting(x-oMovingPlatform.platformSpeed,y,oMovingPlatform))
 		{
 			x += oMovingPlatform.platformSpeed;
+		}
+		if (place_meeting(x,y+1,oMovingPlatform))
+		{
+			var platform = collision_line(x,y,x,y+(sprite_height*.5)+1,oMovingPlatform,false,true);
+			if (platform != noone)
+			{
+				if (platform.xAxis)
+				{
+					{
+						if (platform.right) x += platform.platformSpeed;	
+						if (platform.left) x -= platform.platformSpeed;	
+					}
+				}
+			}
+		}
+		//VERTICAL
+		if (place_meeting(x,y+oMovingPlatform.platformSpeed,oMovingPlatform))
+		{
+			y -= oMovingPlatform.platformSpeed;
+		}
+		if (place_meeting(x,y-oMovingPlatform.platformSpeed,oMovingPlatform))
+		{
+			y += oMovingPlatform.platformSpeed;
 		}
 	}
 	if (right) || (left)
@@ -124,8 +148,11 @@ function scPlayerCollision()
 			{
 				if (place_meeting(x, y + 1, collisionArray[i]))
 				{
-					heightDamage = heightCounter * heightDamageMultiplier;
-					falling = false;
+					if (!place_meeting(x,y+1,oMovingPlatform))
+					{
+						heightDamage = heightCounter * heightDamageMultiplier;
+						falling = false;
+					}
 				}	
 			}
 			vSpeed = 0;

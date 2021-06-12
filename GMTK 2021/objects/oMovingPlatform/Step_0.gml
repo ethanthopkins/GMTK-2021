@@ -8,6 +8,8 @@ if (xAxis)
 			change = true;		
 		}
 		x += platformSpeed;	
+		right = true;
+		left = false;
 	}
 	if (x >= startingX - platformDistance) && (change)
 	{
@@ -16,6 +18,8 @@ if (xAxis)
 			change = false;		
 		}
 		x -= platformSpeed;		
+		right = false;
+		left = true;
 	}
 } else
 {
