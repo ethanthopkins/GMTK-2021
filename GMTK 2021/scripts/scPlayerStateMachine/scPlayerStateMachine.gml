@@ -3,7 +3,7 @@ function scPlayerIdle()
 	sprite_index = sPlayerIdle;
 	playerDamage = idleDamage;
 	scPlayerMovement();
-	
+
 	if (slow)
 	{
 		state = oPlayerState.slow;	
@@ -71,7 +71,25 @@ function scPlayerFast()
 }
 function scPlayerAnimate()
 {
-	return;	
+	image_xscale = cardinalDirection;
+	/*
+	switch (playerSprite)
+	{
+		case sPlayerIdle: 
+			image_xscale = cardinalDirection;
+			break;
+		case sPlayerSlow: 
+			image_xscale = cardinalDirection;
+			break;
+		case sPlayerMedium: 
+			image_xscale = cardinalDirection;
+			break;
+		case sPlayerFast: 
+			image_xscale = cardinalDirection;
+			break;
+		case sPlayerJump: break;
+	}
+	*/
 }
 function scPlayerCollision()
 {
@@ -161,12 +179,12 @@ function scPlayerCollision()
 }
 function scPlayerMovement()
 {
-	//horizontal movement
+	#region horizontal movement
 	horizontal = (right - left);
 	scPlayerCollision();
 	x += (horizontal * playerSpeed);
-	
-	//vertical movement
+	#endregion
+	#region vertical movement
 	if (canJump > -1)
 	{
 		canJump --;	
@@ -187,7 +205,20 @@ function scPlayerMovement()
 	scPlayerCollision();
 	//jump
 	y += vSpeed;
-	
+	#endregion
+	#region DIRECTION
+	//CHANGE PLAYER DIRECTION 
+	if (horizontal >= 0)
+	{
+		playerDirection = 90;	
+		cardinalDirection = 1;
+	} else
+	{
+		playerDirection = 180;	
+		cardinalDirection = -1;
+	}
+	#endregion
+	#region DEATH
 	if (playerHealth <= 0)
 	{
 		playerControls = false;
@@ -196,6 +227,8 @@ function scPlayerMovement()
 			state = oPlayerState.dead;	
 		}
 	}
+	#endregion
+	scPlayerAnimate();
 }
 function scPlayerDead()
 {

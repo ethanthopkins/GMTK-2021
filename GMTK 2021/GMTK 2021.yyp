@@ -12,6 +12,7 @@
     {"id":{"name":"scText","path":"scripts/scText/scText.yy",},"order":0,},
     {"id":{"name":"scPlayerStateMachine","path":"scripts/scPlayerStateMachine/scPlayerStateMachine.yy",},"order":0,},
     {"id":{"name":"rInitial","path":"rooms/rInitial/rInitial.yy",},"order":4,},
+    {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},"order":4,},
     {"id":{"name":"oCol","path":"objects/oCol/oCol.yy",},"order":0,},
     {"id":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},"order":3,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":3,},

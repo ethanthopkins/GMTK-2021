@@ -10,6 +10,7 @@ enum oPlayerState
 }
 state = oPlayerState.idle;
 playerControls = true;
+playerSprite = sPlayerIdle;
 #endregion
 #region SPEEDS
 fastSpeed = 15;
@@ -23,11 +24,12 @@ playerSpeed = mediumSpeed;
 #endregion
 #region PHYSICS
 canJump = -1;
-jumpWindow = 5;
+jumpWindow = 10;
 playerGravity = 5;
 falling = false;
 currentlyJumping = false;
 heightCounter = 0;
+playerDirection = 90;
 #endregion
 #region HEALTH
 playerHealth = 60;
