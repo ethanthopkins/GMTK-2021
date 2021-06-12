@@ -75,31 +75,54 @@ function scPlayerAnimate()
 }
 function scPlayerCollision()
 {
-	if (right) || (left) //horizontal collision
-	if (place_meeting(x+(sign(horizontal) * playerSpeed),y,oCol))
+	var collisionArray;
+	collisionArray[0] = oCol;
+	if (instance_exists(oMovingPlatform)) {collisionArray[1] = oMovingPlatform;}
+	var arrayLength = array_length(collisionArray);
+	//show_debug_message(arrayLength);
+	if (instance_exists(oMovingPlatform))
 	{
-		while (!place_meeting(x + sign(horizontal), y, oCol))
+		if (place_meeting(x+oMovingPlatform.platformSpeed,y,oMovingPlatform))
 		{
-			x += sign(horizontal);	
+			x -= oMovingPlatform.platformSpeed;
 		}
-		horizontal = 0;
-	}
-	{
-		if (place_meeting(x, y + (vSpeed),oCol))
+		if (place_meeting(x-oMovingPlatform.platformSpeed,y,oMovingPlatform))
 		{
-			while (!place_meeting(x, y + sign(vSpeed), oCol))
+			x += oMovingPlatform.platformSpeed;
+		}
+	}
+	if (right) || (left)
+	{//HORIZONTAL COLLISION
+		for (var i = 0; i < arrayLength; ++i) 
+		{
+			if (place_meeting(x+(sign(horizontal) * playerSpeed),y,collisionArray[i]))
+			{
+				while (!place_meeting(x + sign(horizontal), y, collisionArray[i]))
+				{
+					x += sign(horizontal);
+				}
+				horizontal = 0;
+			}
+		}
+	}
+	//VERTICAL COLLISION
+	for (var i = 0; i < arrayLength; ++i) 
+	{
+		if (place_meeting(x, y + (vSpeed),collisionArray[i]))
+		{
+			while (!place_meeting(x, y + sign(vSpeed), collisionArray[i]))
 			{
 				y += sign(vSpeed);	
 			}
 			//if you are on the ground reset canJump
-			if (place_meeting(x, y + 1, oCol))
+			if (place_meeting(x, y + 1, collisionArray[i]))
 			{
 				canJump = jumpWindow;	
 			}
 			//if you're falling check when you are on the ground
 			if (falling)
 			{
-				if (place_meeting(x, y + 1, oCol))
+				if (place_meeting(x, y + 1, collisionArray[i]))
 				{
 					heightDamage = heightCounter * heightDamageMultiplier;
 					falling = false;
