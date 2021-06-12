@@ -9,7 +9,7 @@
     "name": "sPlayerMedium",
     "path": "sprites/sPlayerMedium/sPlayerMedium.yy",
   },
-  "persistent": false,
+  "persistent": true,
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,

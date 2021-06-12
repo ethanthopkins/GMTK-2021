@@ -208,11 +208,12 @@ function scPlayerMovement()
 	#endregion
 	#region DIRECTION
 	//CHANGE PLAYER DIRECTION 
-	if (horizontal >= 0)
+	if (horizontal > 0)
 	{
 		playerDirection = 90;	
 		cardinalDirection = 1;
-	} else
+	} 
+	if (horizontal < 0)
 	{
 		playerDirection = 180;	
 		cardinalDirection = -1;

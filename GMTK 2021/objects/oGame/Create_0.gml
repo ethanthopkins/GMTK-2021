@@ -8,4 +8,6 @@
 #endregion
 #region STORY
 	global.lengthOfLevel = 100;
+	global.level = 1;
+	global.levelRoom = rLevel1;
 #endregion

@@ -30,6 +30,7 @@ falling = false;
 currentlyJumping = false;
 heightCounter = 0;
 playerDirection = 90;
+cardinalDirection = 1;
 #endregion
 #region HEALTH
 playerHealth = 60;
