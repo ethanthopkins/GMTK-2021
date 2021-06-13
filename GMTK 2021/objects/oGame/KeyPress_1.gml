@@ -2,7 +2,8 @@ if (global.playerHealth <= 0)
 {
 	if (global.healthSave != undefined)
 	{
-		global.playerHealth = global.healthSave;
+		global.playerHealth = 60;
+		//global.playerHealth = global.healthSave; temporarily disabled
 	} else global.playerHealth = 60;
 	if (global.checkPoint)
 	{

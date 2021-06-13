@@ -1,4 +1,5 @@
 /// @desc Set Up Camera
+depth = 1000;
 cam = view_camera[0];
 follow = oPlayer;
 viewWidthHalf = camera_get_view_width(cam) * 0.5;
