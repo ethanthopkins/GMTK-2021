@@ -7,8 +7,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "AGMusic",
+    "path": "audiogroups/AGMusic",
   },
   "soundFile": "snLevel1.mp3",
   "duration": 58.037,

@@ -1,4 +1,10 @@
 /// @description GLOBALS
+//audio
+if !audio_group_is_loaded(AGMusic){
+	audio_group_load(AGMusic);
+}
+
+//
 randomize();
 #region INIT
 	global.iCamera = instance_create_layer(0,0,layer,oCamera);

@@ -1,5 +1,9 @@
 global.roomCheckpoint = room;
-
+if room = rLevelEnd{
+	if !audio_is_playing(snBirds){
+		audio_play_sound(snBirds,0,true);
+	}
+}
 #region SOUND
 	switch (room) 
 	{
@@ -16,6 +20,7 @@ global.roomCheckpoint = room;
 	{
 		if (!audio_is_playing(roomSound))
 		{
+			audio_group_stop_all(AGMusic);
 			audio_play_sound(roomSound,100,true);
 		}
 	}

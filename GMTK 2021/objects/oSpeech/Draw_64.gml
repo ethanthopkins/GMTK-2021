@@ -1,12 +1,10 @@
-draw_set_color(c_grey)
+draw_set_color(c_black)
 draw_rectangle(global.screenWidth*.1,global.screenHeight*.15,global.screenWidth*.9,global.screenHeight*.4,false);
 draw_set_color(global.textColor)
 draw_rectangle(global.screenWidth*.1,global.screenHeight*.15,global.screenWidth*.9,global.screenHeight*.4,true);
 if (global.talker != undefined) draw_sprite(global.talker,0,global.screenWidth*.15,draw_y+global.screenHeight*.1);
 scDrawSetText(fDefault,c_white,fa_center,fa_middle);
-draw_set_font(fName);
-if (global.name != undefined) draw_text(global.screenWidth*.175,global.screenHeight*.18,string(global.name));
-draw_set_font(fDefault);
+if (global.name != undefined) draw_text(global.screenWidth*.175,global.screenHeight*.15,string(global.name));
 if (textProgress <= length)
 {
 	textProgress += global.textSpeed;

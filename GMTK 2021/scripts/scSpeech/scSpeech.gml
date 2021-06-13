@@ -116,7 +116,7 @@ function scGetTheText(_line) //the actual text storage
 			}
 			global.msg[6] = "My developers had a lot of fun making this.";
 			global.msg[7] = "@ethanThopkins on code in GMS2";
-			global.msg[8] = "@DavidDee on Music";
+			global.msg[8] = "@DavidDee on Music/odds n ends";
 			global.msg[9] = "and @Ssapdra on art.";
 			break;
 		default: break;

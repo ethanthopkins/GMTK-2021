@@ -1,4 +1,4 @@
-	depth = 450;
+	depth = 550;
 	BGLayer1 = sBG_7;
 	BGLayer2 = sBG_7;
 	BGLayer3 = sBG_7;

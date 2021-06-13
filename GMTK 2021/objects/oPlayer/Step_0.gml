@@ -1,4 +1,9 @@
 /// @desc Get Inputs
+if keyboard_check_pressed(vk_space) && !instance_exists(oSpeech){
+	if !audio_is_playing(sndBop2){
+		audio_play_sound(sndBop2,0,false);
+	}	
+}
 #region GET INPUTS
 if (playerControls)// you are not dead
 {

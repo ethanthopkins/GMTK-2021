@@ -5,7 +5,7 @@ for(i=0;i<8;i++){
 }
 PBGLayerSun = draw_sprite_ext(sBG_3,0,oCamera.x,PBGSunY,1*SunScale,1*SunScale,0,c_white,1);
 
-for(i=0;i<6;i++){
+for(i=0;i<8;i++){
 	PBGClouds[i] = draw_sprite(sBG_2,0,oCamera.x+CloudCycle+(i*256)-1024,PBGCloudsY);
 }
 for(i=0;i<ceil(room_width/512)+2;i++){

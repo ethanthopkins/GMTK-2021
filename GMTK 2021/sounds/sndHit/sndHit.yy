@@ -7,17 +7,17 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "AGMusic",
-    "path": "audiogroups/AGMusic",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snLevel3.mp3",
-  "duration": 91.253,
+  "soundFile": "sndHit.wav",
+  "duration": 0.510215,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snLevel3",
+  "name": "sndHit",
   "tags": [],
   "resourceType": "GMSound",
 }

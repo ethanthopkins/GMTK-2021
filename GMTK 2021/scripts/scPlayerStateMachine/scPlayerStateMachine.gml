@@ -18,7 +18,10 @@ function scPlayerIdle()
 	}
 }
 function scPlayerSlow()
-{
+{	
+	if !audio_is_playing(sndBop){
+		audio_play_sound(sndBop,0,false);
+	}
 	playerSpeed = slowSpeed;
 	playerDamage = slowDamage;
 	sprite_index = sPlayerSlow;
@@ -35,6 +38,9 @@ function scPlayerSlow()
 }
 function scPlayerMedium()
 {
+	if !audio_is_playing(sndBop){
+		audio_play_sound(sndBop,0,false);
+	}
 	playerSpeed = mediumSpeed;
 	playerDamage = mediumDamage;
 	sprite_index = sPlayerMedium;
@@ -55,6 +61,9 @@ function scPlayerMedium()
 }
 function scPlayerFast()
 {
+	if !audio_is_playing(sndBop){
+		audio_play_sound(sndBop,0,false);
+	}
 	playerSpeed = fastSpeed;
 	playerDamage = fastDamage;
 	sprite_index = sPlayerFast;
