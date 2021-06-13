@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "sElectric",
-    "path": "sprites/sElectric/sElectric.yy",
+    "name": "sCarBattery",
+    "path": "sprites/sCarBattery/sCarBattery.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

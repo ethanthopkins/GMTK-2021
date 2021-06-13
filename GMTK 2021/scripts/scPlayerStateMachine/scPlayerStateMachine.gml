@@ -95,7 +95,8 @@ function scPlayerCollision()
 {
 	var collisionArray;
 	collisionArray[0] = oCol;
-	if (instance_exists(oMovingPlatform)) {collisionArray[1] = oMovingPlatform;}
+	if (instance_exists(oMovingPlatform)) {collisionArray[array_length(collisionArray)] = oMovingPlatform;}
+	//if (instance_exists(oFragilePlatform)) {collisionArray[array_length(collisionArray)] = oFragilePlatform;}
 	var arrayLength = array_length(collisionArray);
 	//show_debug_message(arrayLength);
 	if (instance_exists(oMovingPlatform))
@@ -164,10 +165,14 @@ function scPlayerCollision()
 			//if you're falling check when you are on the ground
 			if (falling)
 			{
+				//LANDED
 				if (place_meeting(x, y + 1, collisionArray[i]))
 				{
+					jumping = false;
+					//But not on the platform
 					if (!place_meeting(x,y+1,oMovingPlatform))
 					{
+						scScreenShake(3, 5);
 						heightDamage = heightCounter * heightDamageMultiplier;
 						falling = false;
 					}
@@ -175,6 +180,31 @@ function scPlayerCollision()
 			}
 			vSpeed = 0;
 		}	
+		
+		//FRAGILE PLATFORM COLLISION
+		if (instance_exists(oFragilePlatform))
+		{
+			var _inst = collision_line(x,y,x,y+1,oFragilePlatform,false,true);
+			if (_inst != noone)
+			{
+				if (_inst.ready == false)
+				{
+					if (place_meeting(x, y + (vSpeed),oFragilePlatform))
+					{
+						while (!place_meeting(x, y + sign(vSpeed), oFragilePlatform))
+						{
+							y += sign(vSpeed);	
+						}
+						//if you are on the ground reset canJump
+						if (place_meeting(x, y + 1, oFragilePlatform))
+						{
+							canJump = jumpWindow;	
+						}
+						vSpeed = 0;
+					}	
+				}
+			}
+		}
 	}
 }
 function scPlayerMovement()
@@ -191,6 +221,7 @@ function scPlayerMovement()
 	}
 	if (jump) && (canJump > 0)
 	{
+		jumping = true;
 		vSpeed = jumpSpeed;	
 		canJump = 0;
 	}
@@ -201,6 +232,17 @@ function scPlayerMovement()
 		heightCounter ++;
 	}
 	//gravity
+	if (vSpeed < -1) && (vSpeed > -5)
+	{
+		playerGravity -= 1;	
+	}
+	if (vSpeed > 0)
+	{
+		if (playerGravity < 4)
+		{
+			playerGravity += 1;
+		}
+	}
 	vSpeed += playerGravity;
 	scPlayerCollision();
 	//jump
@@ -233,5 +275,6 @@ function scPlayerMovement()
 }
 function scPlayerDead()
 {
+	sprite_index = sPlayerDead;
 	return;
 }

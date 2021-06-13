@@ -9,7 +9,7 @@ function scDrawSetText(font,color,halign,valign)
 	draw_set_valign(valign);
 }
 */
-function scDrawSetText(color, halign, valign)
+function scText(color, halign, valign)
 {
 	draw_set_color(color);
 	draw_set_halign(halign);
