@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sInvisCol",
-    "path": "sprites/sInvisCol/sInvisCol.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": false,
   "spriteMaskId": null,

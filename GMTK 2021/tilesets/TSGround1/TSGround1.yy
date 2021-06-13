@@ -1,5 +1,4 @@
 {
-  "name": "TSGround1",
   "spriteId": {
     "name": "sBG_ground1",
     "path": "sprites/sBG_ground1/sBG_ground1.yy",
@@ -39,6 +38,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "TSGround1",
   "tags": [],
   "resourceType": "GMTileSet",
 }

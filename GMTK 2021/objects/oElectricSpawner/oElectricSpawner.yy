@@ -4,7 +4,7 @@
     "path": "sprites/sElectric/sElectric.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

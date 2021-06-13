@@ -1,3 +1,4 @@
+
 if room = rLevel0{
 	room_goto(rLevel1);
 }

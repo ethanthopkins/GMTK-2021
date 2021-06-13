@@ -1,5 +1,4 @@
 {
-  "name": "TSForegroundGradient",
   "spriteId": {
     "name": "sBGSkyGradient2",
     "path": "sprites/sBGSkyGradient2/sBGSkyGradient2.yy",
@@ -39,6 +38,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "TSForegroundGradient",
   "tags": [],
   "resourceType": "GMTileSet",
 }

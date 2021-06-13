@@ -1,5 +1,4 @@
 {
-  "name": "TSImportant1",
   "spriteId": {
     "name": "sBG_10",
     "path": "sprites/sBG_10/sBG_10.yy",
@@ -39,6 +38,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "TSImportant1",
   "tags": [],
   "resourceType": "GMTileSet",
 }

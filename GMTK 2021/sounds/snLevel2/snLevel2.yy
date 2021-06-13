@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snLevel2.mp3",
-  "duration": 91.253,
+  "duration": 123.485,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
