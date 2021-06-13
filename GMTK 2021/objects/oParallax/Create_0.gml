@@ -1,8 +1,19 @@
-	depth = 100;
+	depth = 450;
 	BGLayer1 = sBG_7;
 	BGLayer2 = sBG_7;
 	BGLayer3 = sBG_7;
 	BGLayer4 = sBG_7;
+	BGLayer1Y = 400	;
+	BGLayer2Y = 500	;
+	BGLayer3Y = 600	;
+	BGLayer4Y = 700	;
+	PBGCloudsY = 150;
+	PBGSunY = 300;
+	
 	SunRot = 0;
 	SunScale = 1;
 	SunScaleBool = true;
+	CloudCycle = 0;
+	ColFadedFar = make_color_rgb(120, 120, 120);
+	ColFadedMid = make_color_rgb(160, 160, 160);
+	ColFadedNear = make_color_rgb(200, 200, 200);

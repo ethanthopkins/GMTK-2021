@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "BG",
-    "path": "folders/Sprites/BG.yy",
+    "name": "other",
+    "path": "folders/Sprites/BG/other.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBG_3_1",

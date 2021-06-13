@@ -1,8 +1,15 @@
 
+CloudCycle += 1;
 SunRot += .25;
+
+if CloudCycle = 256{
+	CloudCycle = 0;
+}
+
 if SunRot > 360{
 	SunRot = 0;
 }
+
 if SunScale < 1.05{
 	SunScaleBool = true
 } 
