@@ -93,6 +93,7 @@ function scReactivateTimer()
 {
 	oPlayer.alarm[0] = room_speed * .5;	
 }
+/*
 function scDrawSetText(font,color,halign,valign)
 {
 	draw_set_font(font);

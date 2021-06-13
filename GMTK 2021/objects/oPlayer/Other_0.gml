@@ -1,2 +1,2 @@
 /// @desc Lose Health when you fall off
-playerHealth = 0;
+global.playerHealth = 0;

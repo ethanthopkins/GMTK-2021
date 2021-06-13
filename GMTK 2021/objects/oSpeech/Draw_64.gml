@@ -1,4 +1,4 @@
-draw_set_color(c_black)
+draw_set_color(c_grey)
 draw_rectangle(global.screenWidth*.1,global.screenHeight*.15,global.screenWidth*.9,global.screenHeight*.4,false);
 draw_set_color(global.textColor)
 draw_rectangle(global.screenWidth*.1,global.screenHeight*.15,global.screenWidth*.9,global.screenHeight*.4,true);

@@ -1,2 +1,2 @@
 /// @desc Change Init Room
-room = rLevel1;
+room = rHeader;

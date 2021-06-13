@@ -220,7 +220,7 @@ function scPlayerMovement()
 	}
 	#endregion
 	#region DEATH
-	if (playerHealth <= 0)
+	if (global.playerHealth <= 0)
 	{
 		playerControls = false;
 		if (canJump)
