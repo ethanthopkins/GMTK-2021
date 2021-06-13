@@ -1,0 +1,1 @@
+checkIfTextIsGone = false;
